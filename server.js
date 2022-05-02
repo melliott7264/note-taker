@@ -14,7 +14,17 @@ function validateNotes(newNote) {
 };
 
 function createNewNote(newNote, notes) {
-
+        const note = newNote;
+        
+        notes.push(note);
+    
+        fs.writeFileSync(
+            path.join(__dirname, '/db/db.json'),
+            JSON.stringify(notes, null, 2)
+        );
+    
+        return note;
+    };
 };
 
 app.get('/api/notes', (req, res)=> {
@@ -24,6 +34,8 @@ app.get('/api/notes', (req, res)=> {
 });
 
 app.post('/api/notes', (req, res) => {
+     // set id based on what the next index of the array will be
+     req.body.id = notes.length.toString();
 
     // if any data in req.body is incorrect, send 400 error back
     if ( !validateNotes(req.body)) {
