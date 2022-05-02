@@ -1,14 +1,15 @@
 const express = require('express');
-const {notes} = require('./db/db.json');
+const notes = require('./db/db1');
 const fs = require('fs');
 
 const path = require('path');
-console.log( path.join(__dirname, '/db/db.json'));
 
 // set port for Heroku, if available, or 3001 by default
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+
+
 
 app.get('/api/notes', (req, res)=> {
     let results = notes;
@@ -17,8 +18,7 @@ app.get('/api/notes', (req, res)=> {
     //     results = filterByQuery(req.query, results);
     // }
 
-    res.send('This is a test of the Note Taker app.');
-    // res.json(notes);
+    res.json(results);
 });
 
 app.post('/api/notes', (req, res) => {
@@ -26,7 +26,7 @@ app.post('/api/notes', (req, res) => {
     req.body.id = notes.length.toString();
 
     // if any data in req.body is incorrect, send 400 error back
-    if ( !validateAnimal(req.body)) {
+    if ( !validateNotes(req.body)) {
         res.status(400).send('The animal data is not property formatted.');
     } else {
         // add animal to json file and animals array in this function
