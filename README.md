@@ -24,6 +24,8 @@ Mark Elliott  https://github.com/melliott7264
 
 This application was built as part of Challenge 11 for the University of Richmond Coding Boot Camp.  Some starter code was provided including all the front end files. 
 
+Using NPM package Short Unique ID(https://www.npmjs.com/package/short-unique-id) to generate a unique note ids.
+
 ## License
 
 Copyright (c) 2022 Mark Elliott
