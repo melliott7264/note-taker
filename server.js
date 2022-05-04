@@ -87,9 +87,14 @@ app.post('/api/notes', (req, res) => {
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-    // get the id of the note to delete
-    let id = req.params.id;
-    deleteNote(id);
+    // get the id of the note, if available, and pass it to deleteNote()
+    if (req.params.id) {
+        deleteNote(req.params.id);
+        res.status(200).send("Deletion completed");
+        // else send an error message
+    }else {
+        res.status(400).send("Please specify a note id");
+    }
 });
 
 // serving up the index.html file
