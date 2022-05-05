@@ -12,11 +12,11 @@ This new cloud application is to facilitate taking notes with a title and text. 
 
 ## Installation
 
-As this application runs completely in the cloud, there is no installation required to run the appliation from the cloud.  If you wish to download the application from GitHub and run it locally, clone the entire repository to a local folder and install it by typing "npm install".  This assumes npm is installed on your system.  That should install express and Jest.  The GitHub repository may be found here: https://github.com/melliott7264/note-taker.
+As this application runs completely in the cloud, there is no installation required to run the appliation from the cloud.  If you wish to download the application from GitHub and run it locally, clone the entire repository to a local folder and install it by typing "npm install".  This assumes npm is installed on your system.  That should install Express and Short-Unique-Id.  The GitHub repository may be found here: https://github.com/melliott7264/note-taker.
 
 ## Usage
 
-This application can be run from this URL:  https://calm-harbor-57404.herokuapp.com/ on Heroku.  Follow the prompts on the screen to view the animals and zookeepers and add entries to the catalog for each.  There is also a search box on both the animals and zookeepers screens that allow a search of the respective catalogs.
+This application can be run from this URL:  https://calm-harbor-57404.herokuapp.com/ on Heroku.  This is a very simple application in that you can only create, save and delete notes.  You click the plus icon a the upper right to create a new note.   That clears the Note Title and Note Text fields so that you can enter fresh text in them.   Once entered, click on the disk icon that will appear at the upper right to save the note.   The saved note should then appear in the list of notes to the left.  If you want to delete a note, click on the trash can icon next to it.   
 
 ![Note Taker Screenshot](./NoteTakerScreenShot.png)
 
@@ -51,7 +51,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ---
-
-## Tests
-
-There are Jest tests of the server side scripts for the animals(.js) and zookeepers(.js).  After installing the application, run "npm test".  

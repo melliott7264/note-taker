@@ -89,6 +89,7 @@ app.delete('/api/notes/:id', (req, res) => {
     // get the id of the note, if available, and pass it to deleteNote()
     if (req.params.id) {
         deleteNote(req.params.id);
+        // Some response is essential for the proper execution of the deletion on the front end
         res.status(200).send("Deletion completed");
         // else send an error message
     }else {
