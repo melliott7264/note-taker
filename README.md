@@ -3,7 +3,7 @@
 
 This new cloud application is to facilitate taking notes with a title and text.   The data is stored in a server side file.
 
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
