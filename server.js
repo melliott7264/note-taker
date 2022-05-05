@@ -39,14 +39,8 @@ function validateNotes(newNote) {
 function createNewNote(newNote, notes) {
         const note = newNote;
         notes.push(note);
-    
-        fs.writeFileSync(
-            path.join(__dirname, '/db/db.json'),
-            JSON.stringify(notes, null, 2)
-        );
-    
+        saveFile();
         return note;
-    
 };
 
 function deleteNote(id) {
@@ -54,14 +48,19 @@ function deleteNote(id) {
     for ( i=0; i<notes.length; i++ ) {
         if ( notes[i].id === id) {
             notes.splice(i,1);
-            fs.writeFileSync(
-                path.join(__dirname, '/db/db.json'),
-                JSON.stringify(notes, null, 2)
-            );
+            saveFile();
         } 
     }
     return;
 };
+
+function saveFile() {
+    fs.writeFileSync(
+        path.join(__dirname, '/db/db.json'),
+        JSON.stringify(notes, null, 2)
+    );
+    return;
+}
 
 app.get('/api/notes', (req, res)=> {
     let results = notes;

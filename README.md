@@ -18,11 +18,13 @@ As this application runs completely in the cloud, there is no installation requi
 
 This application can be run from this URL:  https://calm-harbor-57404.herokuapp.com/ on Heroku.  Follow the prompts on the screen to view the animals and zookeepers and add entries to the catalog for each.  There is also a search box on both the animals and zookeepers screens that allow a search of the respective catalogs.
 
+![Note Taker Screenshot](./NoteTakerScreenShot.png)
+
 ## Credits
 
 Mark Elliott  https://github.com/melliott7264
 
-This application was built as part of Challenge 11 for the University of Richmond Coding Boot Camp.  Some starter code was provided including all the front end files. 
+This application was built as part of Challenge 11 for the University of Richmond Coding Boot Camp.  Some starter code was provided including all the front end files.  The frontend index.js file had to be updated so that the GET, POST, and Delete code worked with the backend server.js file.
 
 Using NPM package Short Unique ID(https://www.npmjs.com/package/short-unique-id) to generate a unique note ids.
 
